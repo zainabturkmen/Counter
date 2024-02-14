@@ -1,6 +1,7 @@
 // JavaScript
 
 // setting initail value
+
 let count = 0;
 
 // select buttons and value
