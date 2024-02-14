@@ -1,33 +1,35 @@
 // JavaScript
 
-// set initail count
+// setting initail value
 let count = 0;
 
-// select value and buttons
+// select buttons and value
 
-const value = document.querySelector("#value");
-const btns = document.querySelectorAll(".btn");
+const value = document.querySelector("#value")
+const btns = document.querySelectorAll(".btn")
 
 btns.forEach(function(btn){
-    btn.addEventListener("click", function (event) {
-        const styles = event.currentTarget.classList;
+    btn.addEventListener("click", function(e){
+        const styles = e.currentTarget.classList;
+
         if(styles.contains("decrease")){
             count--;
         } else if(styles.contains("increase")){
-            count ++;
+            count++;
         } else{
             count = 0;
-        };
+        }
 
         if(count > 0){
             value.style.color = "green"
-        } if (count < 0){
+        }
+        if(count < 0){
             value.style.color = "blue"
-        } if (count === 0){
-            value.style.color = "black"
         }
 
+        if(count === 0){
+            value.style.color = "black"
+        }
         value.textContent = count;
-    });
-});
-
+    })
+})
